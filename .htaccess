@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Redirect old links and trailing slashes on direct requests only.
+RewriteCond %{THE_REQUEST} "\s/+[^?\s]+(?:\.html|/)[?\s]"
+RewriteRule ^(number-garden|water-wonders|creature-homes|push-and-pull|picture-jigsaw|memory-match)(?:\.html|/)$ /$1 [R=301,L]
+
+# Serve the existing game page at its clean URL.
+RewriteRule ^(number-garden|water-wonders|creature-homes|push-and-pull|picture-jigsaw|memory-match)$ $1.html [L]
