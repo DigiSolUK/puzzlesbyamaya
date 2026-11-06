@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Put the pieces together to make a picture.">
+  <title>Picture Jigsaw | Puzzles by Amaya</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="play-page theme-jigsaw" data-game="picture-jigsaw">
+  <a class="skip-link" href="#main">Skip to game</a>
+  <header class="site-header"><div class="shell header-inner">
+    <a class="brand" href="./" aria-label="Puzzles by Amaya home"><img src="assets/logo.webp" width="604" height="320" alt="Puzzles by Amaya"></a>
+    <a class="header-link" href="./#games"><span aria-hidden="true">←</span> All games</a>
+  </div></header>
+  <main id="main" class="shell play-shell">
+    <div class="game-heading">
+      <span class="game-emblem"><svg aria-hidden="true" focusable="false"><use href="assets/icons.svg#jigsaw"></use></svg></span>
+      <div><p class="subject">Jigsaw</p><h1>Picture Jigsaw</h1></div>
+    </div>
+    <div class="play-panel">
+      <noscript><p>Turn on JavaScript in your browser to play this game.</p></noscript>
+      <section id="play" aria-label="Play Picture Jigsaw" hidden>
+        <div class="play-toolbar">
+          <div class="levels" role="group" aria-label="Difficulty">
+            <button type="button" data-level="easy" aria-pressed="true">Easy</button>
+            <button type="button" data-level="trickier" aria-pressed="false">Trickier</button>
+          </div>
+          <span id="progress" class="progress"></span>
+        </div>
+        <div class="prompt-bar">
+          <h2 id="prompt" tabindex="-1"></h2>
+          <button type="button" id="read-aloud" class="read-aloud"><svg aria-hidden="true" focusable="false"><use href="assets/icons.svg#speaker"></use></svg> <span>Read aloud</span></button>
+        </div>
+        <div id="game-area"></div>
+        <p id="feedback" role="status" aria-atomic="true"></p>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer shell"><span>Puzzles by Amaya</span><a href="./#games">All games</a></footer>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
